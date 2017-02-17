@@ -121,6 +121,6 @@ public class ScreenUtil {
     }
 
     public static String getImageDensity(){
-        return getDisplayWidth()+"*"+getDisplayHeight();
+        return "";
     }
 }

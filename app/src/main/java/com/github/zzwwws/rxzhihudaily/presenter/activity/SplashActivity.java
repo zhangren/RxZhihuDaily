@@ -46,15 +46,15 @@ public class SplashActivity extends BaseActivity implements SplashImageView {
 
     @Override
     public void showStartImage(StartImage startImage) {
-        tvSource.setText(startImage.getText());
+        tvSource.setText("美女九头身！");
+        startImage.setImg("http://image93.360doc.com/DownloadImg/2016/01/1017/64281988_1.jpg");
         Glide
                 .with(this)
-                .load(startImage.getImg())
+                .load(startImage.getImg())//http://www.mzitu.com/9853/2
                 .dontAnimate()
-                .placeholder(R.drawable.splash)
-                .error(R.drawable.splash)
                 .diskCacheStrategy(DiskCacheStrategy.RESULT)
                 .into(imageView);
+        tvSource.setText(startImage.getImg());
         nextStep();
     }
 
